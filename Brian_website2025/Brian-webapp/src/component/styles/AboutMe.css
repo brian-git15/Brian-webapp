@@ -1,0 +1,104 @@
+.content{
+    margin-left: 120px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+}
+/*
+.content.hovered{
+    --_i: 100%;
+    transition: 0.3s, background-size 0.3s 0.3s;
+}
+*/
+
+.title {
+    font-size:50px;
+    color: white;
+    margin: 0;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    margin-left: 50px;
+    
+    
+    --c: white;
+    --b: 5px;
+    --g: 2px;
+
+    padding: calc(var(--g) + var(--b));
+    --_g: #0000 25%,var(--c) 0;
+    background: 
+      conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g))
+       var(--_i,200%) 0  /200% var(--_i,var(--b))  no-repeat,
+      conic-gradient(            at bottom var(--b) left  var(--b),var(--_g))
+       0   var(--_i,200%)/var(--_i,var(--b)) 200%  no-repeat;
+    transition: .3s, background-position .3s .3s;
+    cursor: pointer; 
+}
+
+.title:hover{
+    --_i: 100%;
+    transition: 0.3s, background-size 0.3s 0.3s;
+}
+
+.titletext{
+    z-index: 11;
+}
+#se {
+    color:rgb(0, 0, 0);
+}
+
+.circle{
+    height: 96vh;
+    width: 96vh;
+    overflow: hidden;
+    border: black solid 8px;
+    border-radius: 50%;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.circle::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    /*background: linear-gradient(to right, blue, pink);*/
+    animation: spin 3s linear infinite;
+    overflow: hidden;
+}
+#innercircle{
+    z-index: 10;
+    height: 80vh;
+    width: 80vh;
+}
+#contentcircle{
+    z-index: 9;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .content{
+        margin-left: 10px;
+        padding-top: 100px;
+    }
+    .content.hovered{
+        margin-left: 0;
+    }
+    .title{
+        margin-left: 0;
+    }
+}
