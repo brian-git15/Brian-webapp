@@ -1,25 +1,21 @@
 import { useState } from 'react'
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
-import Bg from './component/jsxfiles/Bg'
-import NavBar from './component/jsxfiles/Navbar'
-import AboutMe from './component/jsxfiles/AboutMe'
-import Goal from "./component/jsxfiles/Goal"
-import Proj from "./component/jsxfiles/Proj"
-import boralis2 from "./assets/boralis2.webp"
+import HomePage from './component/jsxfiles/HomePage';
+import Contact from './component/jsxfiles/Contact';
 
 function App() {
-    const [hover,setHover] = useState(false)
-
   return (
-    <div>
-      <Bg/>
-      <NavBar onHover={() => setHover(true)} onLeave={() => setHover(false)} />
-      <AboutMe isHovered={hover}/>
-      <Proj/>
-      {/*<Goal/>
-      <Proj/>*/}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />}>
+          <Route path="extraPage" element={<Contact />}/>
+          <Route path="*" element={<Contact />}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
-export default App
+export default App;

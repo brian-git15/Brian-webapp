@@ -14,7 +14,7 @@
 
 .title {
     font-size:50px;
-    color: white;
+    color: rgb(0, 0, 0);
     margin: 0;
     position:absolute;
     top: 50%;
@@ -24,6 +24,8 @@
     text-align: center;
     justify-content: center;
     margin-left: 50px;
+    
+    box-shadow: 2px 2px 5px black;
     
     
     --c: white;
@@ -51,6 +53,7 @@
 }
 #se {
     color:rgb(0, 0, 0);
+    text-shadow: none;
 }
 
 .circle{
@@ -101,4 +104,36 @@
     .title{
         margin-left: 0;
     }
+}
+
+.socials{
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    position: relative;
+    margin-top: 300px;
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+}
+
+.socialbtn{
+    text-decoration: none;
+    color: black;
+    border: rgb(255, 255, 255) 2px solid;
+    padding: 5px;
+    margin: 5px;
+    border-radius:5%;
+    background-color: white;
+    box-shadow: 5px 5px 15px black;
+}
+
+.socialbtn:hover{
+    font-size: x-large;
+}
+
+.socialbtn:visited{
+    color: black
 }

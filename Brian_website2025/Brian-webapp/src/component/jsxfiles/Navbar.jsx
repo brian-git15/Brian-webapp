@@ -19,8 +19,8 @@ const NavBar = ({ onHover, onLeave}) => {
                 </div>
                 <div class='Navbtn'> 
                     <a href="#"><img class="btn" src={contactIMG} alt="Contact"></img></a>
-                    
                 </div>
+                
             </ul>
             <ul>
                 <div class = 'NavNames'>
@@ -32,6 +32,7 @@ const NavBar = ({ onHover, onLeave}) => {
                 <div class = 'NavNames'>
                     Contact
                 </div>
+                
             </ul>
         </div>
         
