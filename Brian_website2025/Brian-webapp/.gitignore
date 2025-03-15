@@ -23,4 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 *.json
+<<<<<<< HEAD
+=======
+*.json
+>>>>>>> 4d2826f218f9c545b16083a7bf8d12704daf6982
 *.js

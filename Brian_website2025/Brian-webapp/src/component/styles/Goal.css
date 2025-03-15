@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+.goalcontent {
+    border: 2px solid red;
+    margin-left: 120px;
+    padding: 10px;
+    min-height: 100vh; /* Changed from height to min-height */
+    display: flex; /* Added for better alignment */
+    align-items: center;
+    justify-content: center; /* Fixed justification */
+    overflow: auto; /* Handles content overflow */
+}
+
+.grid {
+    display: flex;
+    padding: 10px;
+    border: 2px solid red;
+    margin-top: 20vh;
+    width: 90vh;
+}
+
+.grid-content {
+    color: white;
+    margin-left: 100px;
+}
+
+#brianimg {
+    overflow: hidden;
+    width: 50vh;
+}
+
+@media only screen and (max-width: 800px) {
+    .grid {
+        flex-direction: column;
+        align-items: center; /* Center content in column layout */
+        word-wrap: break-word; /* Fixed text-wrap */
+        flex-wrap: wrap; /* Allows content wrapping */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .goalcontent {
+        margin-left: 0;
+        padding-top: 0;
+    }
+
+    .goalcontent.hovered {
+        margin-left: 0;
+    }
+
+    .grid {
+        margin-left: 0;
+        padding: 0;
+        margin-top: 0;
+        display: inline; /* Simplified for small screens */
+    }
+
+    #brianimg {
+        width: 100%; /* Full width for small screens */
+    }
+
+    .grid-content {
+        margin-left: 0;
+        text-align: center; /* Center align content */
+    }
+}
